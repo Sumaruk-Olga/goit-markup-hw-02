@@ -5,9 +5,11 @@
   --white-color: #ffffff;
   --background-color: #2f303a;
   --fone-color: #f5f4fa;
-  --page-color: #e5e5e5;
+  --page-color: #ffffff;
   --auth-color: rgba(255, 255, 255, 0.6);
 }
+/* я так и не поняла куда этот цвет давать   #e5e5e5 
+ если он не цвет нашей страницы*/
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -16,7 +18,18 @@ body {
   color: var(--text-color);
   background-color: var(--page-color);
 }
-
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 .nav,
 .auth-nav,
 .auth {
@@ -37,7 +50,7 @@ body {
 }
 
 .logo {
-  color: var(--title-color);
+  color: var(--accent-color);
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
@@ -46,11 +59,14 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-span {
-  color: var(--accent-color);
+.span-header {
+  color: var(--title-color);
 }
 
-footer {
+.span-footer {
+  color: var(--white-color);
+}
+.footer {
   background-color: var(--background-color);
 }
 
@@ -76,7 +92,7 @@ footer {
   color: var(--auth-color);
 }
 
-address {
+.address {
   text-decoration: none;
   font-style: inherit;
 }
@@ -120,7 +136,6 @@ address {
 
 .hero {
   color: var(--white-color);
-  background-color: var(--background-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -128,6 +143,11 @@ address {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+.section-hero {
+  background-color: var(--background-color);
+}
+
 .team {
   background-color: var(--fone-color);
 }
@@ -155,8 +175,10 @@ address {
   cursor: pointer;
 }
 
-button:focus,
-button:hover {
+.button:focus,
+.button:hover,
+.main-button:focus,
+.main-button:hover {
   background-color: var(--accent-color);
   color: var(--white-color);
 }
@@ -176,7 +198,4 @@ button:hover {
 
 .list {
   list-style: none;
-}
-
-.non-seen {
 }

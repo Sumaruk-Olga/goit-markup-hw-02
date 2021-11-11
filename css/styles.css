@@ -66,13 +66,15 @@ body {
 .span-footer {
   color: var(--white-color);
 }
-.footer {
-  background-color: var(--background-color);
-}
 
 .footer-text {
   color: var(--white-color);
 }
+
+.footer {
+  background-color: var(--background-color);
+}
+
 .header {
   background-color: var(--white-color);
   font-size: 14px;
